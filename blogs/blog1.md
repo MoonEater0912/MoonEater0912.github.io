@@ -1,10 +1,12 @@
 ---
-Title: "Known-group Analysis"
+Title: "Known-group Validity"
 date: 2024-09-26
+layout: default
 ---
 
+# Known-group Validity
 
-# Known-group Analysis
+
 
 ## Try to write code
 

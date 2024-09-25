@@ -83,7 +83,7 @@
         <a href="#">Home</a>
         <a href="#">About Me</a>
         <a href="#">Contact</a>
-        <a href="blogs/blog1">Blogs</a>
+        <a href="blog1">Blogs</a>
         <a href="#">Translations</a>
         <a href="#">Projects</a>
         <a href="#">Recipes</a>
@@ -100,6 +100,16 @@
         </ul>
     </section>
 </div> -->
+
+
+    <main>
+        {{ content }} <!-- 渲染页面内容 -->
+    </main>
+
+    <footer>
+        <p>{{ page.title }}</p>
+        <p><small>发布日期: {{ page.date | date: "%Y年%m月%d日" }}</small></p>
+    </footer>
 
 </body>
 

@@ -12,7 +12,7 @@ Unfortunately, RSG's Carnivore cannot run in Windows system today (it runs well 
 
 I report this to RSG through email, and here's Galloway's reply:
 
-![alt text](../images/GallowaysEmail.png)
+![alt text](/images/GallowaysEmail.png)
 
 He need to find another underlying library to use, which means that he has nothing else to do without another library to use. Such a small team cannot make a robust and complex software or system itself, that is why Carnivore is highly denpendent on external library. While Carnivore's vision is partly to empower small teams distributed in this networked society, it brings itself into a dilemma.
 

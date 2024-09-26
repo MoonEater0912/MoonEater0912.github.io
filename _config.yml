@@ -1,4 +1,5 @@
-permalink: /post/:category/:year/:month/:day/:title
+permalink: /post/:year/:month/:day/:title
+pygments: true
 
 exclude:
   - README.md

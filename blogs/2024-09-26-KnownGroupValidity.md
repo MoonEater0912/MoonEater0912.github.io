@@ -2,8 +2,6 @@
 Title: "Known-group Validity"
 date: 2024-09-26
 layout: default
-markdown: kramdown
-highlighter: rouge
 ---
 
 # Known-group Validity

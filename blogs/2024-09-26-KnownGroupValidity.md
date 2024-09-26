@@ -2,7 +2,10 @@
 Title: "Known-group Validity"
 date: 2024-09-26
 layout: default
+tags: "Statistics"
 ---
+
+
 
 # Known-group Validity
 
@@ -14,3 +17,5 @@ data <- data.frame{
     keys = seq(1,3,1)
 }
 ```
+
+{% include footer.html %}

@@ -1,9 +1,2 @@
-# Jekyll 配置文件
-markdown: kramdown
-highlighter: rouge
-
-kramdown:
-  input: GFM  # GitHub Flavored Markdown
-
-plugins:
-  - jekyll-tagging
+permalink: /post/:category/:year/:month/:day/:title
+pygments: true

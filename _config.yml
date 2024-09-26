@@ -1,3 +1,4 @@
-# permalink: /post/:category/:year/:month/:day/:title
+permalink: /post/:category/:year/:month/:day/:title
+
 exclude:
   - README.md

@@ -1,5 +1,5 @@
 ---
-Title: "Known-group Validity"
+title: "Known-group Validity"
 date: 2024-09-26
 layout: post
 category: blog

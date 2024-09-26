@@ -4,3 +4,6 @@ highlighter: rouge
 
 kramdown:
   input: GFM  # GitHub Flavored Markdown
+
+plugins:
+  - jekyll-tagging

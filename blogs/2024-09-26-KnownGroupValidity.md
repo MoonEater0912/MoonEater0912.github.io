@@ -2,7 +2,9 @@
 Title: "Known-group Validity"
 date: 2024-09-26
 layout: default
-tags: "Statistics"
+type: blog
+tags: [Statistics]
+excerpt: "An introduction to Known-group validity analysis (relative effect, effect size, etc.), which is a common method to measure the difference between certain groups (usually treatment group and controlled group, sometimes using the mean value of a variable as cut-off value to define groups), using R."
 ---
 
 

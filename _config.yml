@@ -1,8 +1,3 @@
 # Jekyll 配置文件
 markdown: kramdown
 highlighter: rouge
-
-kramdown:
-  input: GFM  # 启用 GitHub Flavored Markdown (GFM) 特性
-
-theme: minima  # 如果使用 Jekyll 主题，可以指定主题

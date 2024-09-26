@@ -17,5 +17,3 @@ data <- data.frame{
     keys = seq(1,3,1)
 }
 ```
-
-{% include footer.html %}

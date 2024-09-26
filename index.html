@@ -7,9 +7,9 @@ title: Eat moon and Use magic
 {% for post in site.posts %}
 
 {% if post.external_url == nil %}
-<a>{{ post.category }}: </a><a href="{{ post.url }}">{{ post.title }}</a><abbr>{{ post.date | date_to_string }}</abbr>
+<a>{{ post.category }}: </a><a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string }}</abbr>
 {% else %}
-<a>{{ post.category }}: </a><a href="{{ post.external_url }}">{{ post.title }}</a><abbr>{{ post.date | date_to_string
+<a>{{ post.category }}: </a><a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
     }}</abbr>
 {% endif %}
 

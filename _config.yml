@@ -1,5 +1,5 @@
 permalink: /post/:year/:month/:day/:title
-pygments: true
+# pygments: true
 
 exclude:
   - README.md

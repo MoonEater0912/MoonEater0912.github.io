@@ -1,5 +1,5 @@
 ---
-title: "Beef Soup"
+title: "GSS Practice - Birthplace and Political Party Affiliation in the USA"
 date: 2024-12-14
 layout: post
 category: blog

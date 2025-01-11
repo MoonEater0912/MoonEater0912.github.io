@@ -1,5 +1,5 @@
 ---
-title: "My Solutions for Quantitative Social Science: an Introduction in R"
+title: "Solutions for Quantitative Social Science: an Introduction in R"
 date: 2024-12-02
 layout: post
 category: project

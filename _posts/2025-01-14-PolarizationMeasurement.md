@@ -1,0 +1,11 @@
+---
+title: "Measurements for Ideology Polarization in a Network"
+date: 2025-01-14
+layout: post
+category: blog
+tags: [Statistics, Network Science]
+---
+
+
+
+[Hohmann et al. (2023)](https://www.michelecoscia.com/?p=2246) proposed a double definition about 

@@ -20,11 +20,69 @@ I post related blogs and projects here. Sometimes I will share my recipes.
 
 <h3> CV </h3>
 
-My CV can be found <a href="\files\CV_Zeyuan_Chen.pdf">CV</a>
+My newest CV can be found <a href="\files\CV_Zeyuan_Chen.pdf">here</a>
 .
 
 
-<h3> Posts </h3>
+<h3> Research / Publications </h3>
+
+{% for post in site.posts %}
+{% if post.category == "research" %}
+{% if post.external_url == nil %}
+<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% else %}
+<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+<h3> Blogs </h3>
+
+{% for post in site.posts %}
+{% if post.category == "blog" %}
+{% if post.external_url == nil %}
+<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% else %}
+<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+<h3> Projects / Practices </h3>
+
+{% for post in site.posts %}
+{% if post.category == "project" %}
+{% if post.external_url == nil %}
+<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% else %}
+<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+
+<h3> Recipes </h3>
+
+{% for post in site.posts %}
+{% if post.category == "recipe" %}
+{% if post.external_url == nil %}
+<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% else %}
+<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+
+<h3> All posts in the chronological order </h3>
 
 {% for post in site.posts %}
 

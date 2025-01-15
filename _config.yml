@@ -1,5 +1,9 @@
 permalink: /post/:year/:month/:day/:title
 # pygments: true
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+
 
 exclude:
   - README.md

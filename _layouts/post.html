@@ -2,10 +2,45 @@
 layout: default
 ---
 
-<div id="post">
+<!-- <div id="post">
     <h2><a href="{{ page.url }}">
             {{ page.title }}
         </a></h2>
     <div id="date">published {{ page.date | date_to_string }}</div>
     {{ content }}
-</div>
+</div> -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+
+    <!-- Add MathJax CDN Script -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    <!-- Configure MathJax to recognize $...$ as inline math -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']]
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div id="post">
+        <h2><a href="{{ page.url }}">
+                {{ page.title }}
+            </a></h2>
+        <div id="date">published {{ page.date | date_to_string }}</div>
+        {{ content }}
+    </div>
+</body>
+
+</html>

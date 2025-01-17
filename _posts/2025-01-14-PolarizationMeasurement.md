@@ -27,16 +27,18 @@ To conduct this randomization, basically we should keep the edge structure untou
 $$
 \text{d} = \frac{\text{EI}_obs - \miu}{\sd}
 $$
+
 where $\sd$ is the standard deviation of the baseline distribution, and the $\miu$ indicates the mean value of that distribution.
 
 We calculate the rescaled E-I Index as follow:
 
 $$
 \begin{align*}
-\text{E-I Index}^* & = \frac{2}{1 + \e^{k\cdot \text{d}}} - 1
-& = \frac{1 - \e^{k\cdot \text{d}}}{1 + \e^{k\cdot \text{d}}}
+\text{E-I Index}^* & = \frac{2}{1 + \exp(k\cdot \text{d})} - 1
+& = \frac{1 - \exp(k\cdot \text{d})}{1 + \exp(k\cdot \text{d})}
 \end{align*}
 $$
+
 where $k$ refers to the rescaling coefficient. I set $k$ as 0.5 in my sample code. The smaller the $k$ is, the less sensitive the $\text{E-I Index}^*$ is to changes near zero. Thus, we recommend to set a small $k$ if the network is empirically highly polarized, while setting a large $k$ if the network is not likely to be polarized.
 
 There is another important limitation of E-I Index as a measurement for polarization. [Hohmann et al. (2023)](https://www.michelecoscia.com/?p=2246) proposed a double definition about ideology polarization: (a) 

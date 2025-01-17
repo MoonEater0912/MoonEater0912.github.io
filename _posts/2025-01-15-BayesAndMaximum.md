@@ -42,6 +42,7 @@ $$
 & = \arg_{\theta} \max \prod_{i = 1}^n \Pr(X = x_i \mid \theta = \hat{\theta}) \Pr(\theta = \hat{\theta})
 \end{align*}
 $$
+
 where $\theta^*$ is the estimated parameter(s).
 
 It is clear that, because of the lack of dynamically updating, we only use the a priori distribution of the parameter once, which means that if the a priori distribution of $\theta$ is an uniform distribution, we will have:

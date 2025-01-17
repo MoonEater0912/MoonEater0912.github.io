@@ -6,7 +6,7 @@ category: blog
 tags: [Statistics, Network Science]
 ---
 
-*Note: I have written a sample code for E-I Index and rescaled E-I Index, which can be seen here.*
+*Note: I have written a sample code for E-I Index and rescaled E-I Index, including testing on a real world dataset, which can be seen [here](/htmls/EIIndex_congressman.html).*
 
 E-I Index is a popular measurement for polarization. Naturally, we say a network is polarized, when there are more links between opposed nodes than those between homogenous nodes. Thus, we have the following definition:
 
@@ -25,10 +25,10 @@ To address this limitation, the two papers mentioned above both take a strategy 
 To conduct this randomization, basically we should keep the edge structure untouched, while randomly re-distributing the nodes' characteristics (i.e., which party or community each node belongs to). In this way, we keep the global features, making it possilble to determine the influence of nodes' characteristics. After let's say 5,000 times of randomization, we will hopefully get a distribution of randomized E-I Index, and we calculate the deviation score as follow:
 
 $$
-\text{d} = \frac{\text{EI}_obs - \miu}{\sd}
+\text{d} = \frac{\text{EI}_obs - \mu}{\sigma}
 $$
 
-where $\sd$ is the standard deviation of the baseline distribution, and the $\miu$ indicates the mean value of that distribution.
+where $\sigma$ is the standard deviation of the baseline distribution, and the $\mu$ indicates the mean value of that distribution.
 
 We calculate the rescaled E-I Index as follow:
 
@@ -40,5 +40,9 @@ $$
 $$
 
 where $k$ refers to the rescaling coefficient. I set $k$ as 0.5 in my sample code. The smaller the $k$ is, the less sensitive the $\text{E-I Index}^*$ is to changes near zero. Thus, we recommend to set a small $k$ if the network is empirically highly polarized, while setting a large $k$ if the network is not likely to be polarized.
+
+I used the [dataset of American congressman](https://voteview.com/data) to test the index. The results show that after the 97th Congress, that is, after the Reagan administration came to power, the degree of polarization of U.S. congressmen from both the Democratic and Republican parties (as reflected in congressional voting preferences) has stabilized at a high level, much higher than it had been before. The results are shown in the figure below. The lower the value is, the more polarized it is.
+
+![alt text](/images/congressman.png)
 
 There is another important limitation of E-I Index as a measurement for polarization. [Hohmann et al. (2023)](https://www.michelecoscia.com/?p=2246) proposed a double definition about ideology polarization: (a) 

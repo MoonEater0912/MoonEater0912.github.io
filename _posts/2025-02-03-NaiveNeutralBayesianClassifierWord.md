@@ -26,7 +26,7 @@ For classification task, the only thing we care about is whether the model predi
 
 $$
 \begin{align*}
-R_i &= \sum_{j for c_j != c_i }\cdot P(c_j | x_i)
+R_i &= \sum_{j for c_j != c_i }\cdot P(c_j | x_i)\\
 &= 1 - P(c_i | x_i)
 \end{align*}
 $$

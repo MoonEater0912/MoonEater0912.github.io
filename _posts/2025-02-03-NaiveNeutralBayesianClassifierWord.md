@@ -48,10 +48,10 @@ The problem with the a priori is not inevitable. If the sizes of positive set an
 Another concern, usually for the text classification, is if there are many words indicating neutrality, the efficiency of predicting could be very low. In this case, as neutrality is not helpful for determine whether the case is positive or negative (it will add similar values to all the likelihood), we can ignore those neutral words, as well as ignoring those unpopular words (whose frequencies are not large enough to provide valuable information). Neutrality can be defined as:
 
 $$
-P(Word|Pos) \approx P(Word|Neg)
+P(Word \mid Pos) \approx P(Word\mid Neg)
 $$
 
-However, such operation will not increase the accuracy, as it substracts nearly same values from all the likelihood ($P(neutral word \mid Pos)$, $P(neutral word \mid Neg)$, $P(not neutral word \mid Pos)$, $P(not neutral word \mid Neg)$, these four are nearly the same value). I've try to run such NBC ignoring neutral words, and there's just a very sligh and random difference with the original result.
+However, such operation will not increase the accuracy, as it substracts nearly same values from all the likelihood ($P(\text{neutral word} \mid Pos)$, $P(\text{neutral word} \mid Neg)$, $P(\text{not neutral word} \mid Pos)$, $P(\text{not neutral word} \mid Neg)$, these four are nearly the same value). I've try to run such NBC ignoring neutral words, and there's just a very slight and random difference with the original result.
 
 ![alt text](/images/NBC_ignoring_neutral.png)
 

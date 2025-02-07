@@ -67,6 +67,21 @@ My newest CV can be found <a href="\files\CV_Zeyuan_Chen.pdf">here</a>
 {% endfor %}
 
 
+<h3> Translations </h3>
+
+{% for post in site.posts %}
+{% if post.category == "translation" %}
+{% if post.external_url == nil %}
+<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% else %}
+<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+
 <h3> Recipes </h3>
 
 {% for post in site.posts %}

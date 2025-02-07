@@ -35,7 +35,7 @@ As the number of wrong prediction, as a matrix of model accuracy, is not good an
 
 But here we encounter the two weaknesses of Bayesian classifier. The first one is about the calculation of likelihood, the second one is about the calculation of the a priori.
 
-It is obviously very hard to compute $P(x | C_i) = P(x_i, x_2, ..., x_n | c_i)$ when $n$ is large and sample size is small. Commonly, not all the combinations of features will appear in the train dataset (Laplace smoothing could be used when it happens). To make our lives better, we usually have to introduce the conditional independency assumption, making Bayesian classifer naive:
+It is obviously very hard to compute $P(x \mid C_i) = P(x_i, x_2, ..., x_n \mid c_i)$ when $n$ is large and sample size is small. Commonly, not all the combinations of features will appear in the train dataset (Laplace smoothing could be used when it happens). To make our lives better, we usually have to introduce the conditional independency assumption, making Bayesian classifer naive:
 
 $$
 P(x_i, x_2, ..., x_n | c_i) = \prod{i = 1}{n}P(x_i | c_i)
@@ -51,7 +51,7 @@ $$
 P(Word|Pos) \approx P(Word|Neg)
 $$
 
-However, such operation will not increase the accuracy, as it substracts nearly same values from all the likelihood ($P(neutral word | Pos), P(neutral word | Neg), P(not neutral word | Pos), P(not neutral word | Neg)$, these four are nearly the same value). I've try to run such NBC ignoring neutral words, and there's just a very sligh and random difference with the original result.
+However, such operation will not increase the accuracy, as it substracts nearly same values from all the likelihood ($P(neutral word \mid Pos)$, $P(neutral word \mid Neg)$, $P(not neutral word \mid Pos)$, $P(not neutral word \mid Neg)$, these four are nearly the same value). I've try to run such NBC ignoring neutral words, and there's just a very sligh and random difference with the original result.
 
 ![alt text](/images/NBC_ignoring_neutral.png)
 

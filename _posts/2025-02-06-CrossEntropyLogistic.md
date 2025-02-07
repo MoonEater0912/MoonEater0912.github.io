@@ -3,6 +3,7 @@ title: "Cross Entropy vs. MSE in Logistic Regression"
 date: 2025-02-06
 layout: post
 category: blog
+tags: [Statistics, Machine Learning]
 ---
 
 
@@ -59,6 +60,7 @@ $$
 2\cdot (\phi(\Theta) - y_i) \cdot x_i \cdot {\phi^2(\Theta)} \cdot (1 - \frac{1}{\phi(\Theta)})
 \end{align*}
 $$
+
 To determine whether $L$ is convex, we just need to check the sign of its 2nd-order derivative. So we ingnore the constant $2$ and $x_i$, and continue to calculate derivation:
 
 $$

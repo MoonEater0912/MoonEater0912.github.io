@@ -1,8 +1,9 @@
 ---
-title: "Some Thoughts on Naive Bayesian Classifier"
+title: "Some Notes on Naive Bayesian Classifier"
 date: 2025-02-03
 layout: post
 category: blog
+tags: [Statistics, Machine Learning, R]
 ---
 
 [Naive Bayesian Classifier (NBC)](https://github.com/familyld/Machine_Learning/blob/master/07Bayes_classifier.md) is a kind of **generative models**. For classification task, we call these models as **discriminative models**: they directly model the a posteriori probability (or the decision boundary, i.e., given certain features, what is the probability of this sample being classified as class $C_i$), without considering the a priori probability of each class, nor the conditional probabilities of feature (features' probability distributions) given certain class. Examples include logistic regression (modelling the a posteriori probability) and SVM (modelling the decision boundary). While for generative models, we first focus on a) the a pripori probability distribution of classes; b) the conditional probability distribution of features (or the likelihood of observed features), and second calculate the a posteriori probability based on these information:
@@ -21,12 +22,12 @@ $$
 
 where $N$ is the number of all the possible results. Specifically, when conducting a binary-class classifying, $N$ is equal to the number of classes, which is $2$. $C_j$ is the predict result. $L_{ij}$ is set as 0 when $c_j = y_j$.
 
-For classification task, the only thing we care about is whether the model predict the right class, so $L_{ij}$ is constantly $1$ when the prediction is wrong. Therefore, we have (a little bit confusion as $c_j$ means the j-th class while $c_i$ means the observed class of $x_i$):
+For classification task, the only thing we care about is whether the model predict the right class, so $L_{ij}$ is constantly $1$ when the prediction is wrong. Therefore, we have (a little bit confusion as $c_j$ means the j-th class while $c_i$ means the observed class of $x_i$ ):
 
 $$
 \begin{align*}
 R_i &= \sum_{j for c_j != c_i }\cdot P(c_j | x_i)
-$= 1 - P(c_i | x_i)
+&= 1 - P(c_i | x_i)
 \end{align*}
 $$
 

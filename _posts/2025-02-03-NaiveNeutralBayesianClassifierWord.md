@@ -57,7 +57,7 @@ However, such operation will not increase the accuracy, as it substracts nearly 
 
 The code is attatched:
 
-```R
+```Python
 def tweet_classifier_ignoring_neutral(tweet, classifier_dict, threshold = 0.85):
     """ param tweet: string containing tweet message
         param classifier: dict containing 'basis' - training words

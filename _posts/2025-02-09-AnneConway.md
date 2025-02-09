@@ -1,6 +1,6 @@
 ---
 title: "The Principles of the Most Ancient and Modern Philosophy, by Anne Conway"
-date: 2025-02-07
+date: 2025-02-09
 layout: post
 category: translation
 ---
@@ -11,4 +11,4 @@ The book I use is published by Cambridge University Press, first published in 19
 
 Here's what I have done so far:
 
-[Chap 1 to Chap 3](\\files\Anne_Conway_Principles\Chap1_3.pdf), concerning Trinity, God and his divine attributes.
+[Chap 1 to Chap 3](\\files\\Anne_Conway_Principles\\Chap1_3.pdf), concerning Trinity, God and his divine attributes.

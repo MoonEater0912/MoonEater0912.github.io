@@ -26,7 +26,7 @@ For classification task, the only thing we care about is whether the model predi
 
 $$
 \begin{align*}
-R_i &= \sum_{j for c_j != c_i }\cdot P(c_j | x_i)\\
+R_i &= \sum_{j \in \{j\mid c_j != c_i \}}P(c_j | x_i)\\
 &= 1 - P(c_i | x_i)
 \end{align*}
 $$
@@ -38,7 +38,7 @@ But here we encounter the two weaknesses of Bayesian classifier. The first one i
 It is obviously very hard to compute $P(x \mid C_i) = P(x_i, x_2, ..., x_n \mid c_i)$ when $n$ is large and sample size is small. Commonly, not all the combinations of features will appear in the train dataset (Laplace smoothing could be used when it happens). To make our lives better, we usually have to introduce the conditional independency assumption, making Bayesian classifer naive:
 
 $$
-P(x_i, x_2, ..., x_n | c_i) = \prod{i = 1}{n}P(x_i | c_i)
+P(x_i, x_2, ..., x_n | c_i) = \prod_{i = 1}^{n}P(x_i | c_i)
 $$
 
 We can also use logarithm to make computation easier. However, this naive assumption is not always a reasonable assumption, in many cases different features are interdependent, even the class is given. For example, if we are developing a model to predict whether Bob likes certain movie (binary classes classification, *Like* and *Not Like*), and we know that Bob likes the movies acted by Chris Evans and those acted by Robert Downey Jr., while he doesn't like the movies acted by both these two superheroes (which clearly excludes all the Marvel movies). In such case, given the class *like*, the feature *Chris Evans* and the feature *Robert Downey Jr.* are negatively correlated; given the class *not like*, these two features are then positively correlated. Therefore, after introducing the naive assumption, NBC will not learn this knowledge, meaning it loses some important information, thus losing accuracy.

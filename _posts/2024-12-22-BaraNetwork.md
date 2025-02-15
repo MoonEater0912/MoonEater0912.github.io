@@ -13,3 +13,5 @@ For the exercises requiring coding, I use Networkx in Python.
 [Chap 1: Introduction](https://www.kaggle.com/code/toeatmooon/chap-1)
 
 [Chap 2: Random Networks](https://www.kaggle.com/code/toeatmooon/chap-2)
+
+[Chap 3: Scale-free Networks](https://www.kaggle.com/code/toeatmooon/chap-3)

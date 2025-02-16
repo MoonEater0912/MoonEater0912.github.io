@@ -13,4 +13,4 @@ Here's what I have done so far:
 
 [Chap 1 to Chap 3](https://mooneater0912.github.io/files/Anne_Conway_Principles/Chap1_3.pdf), concerning Trinity, God and his divine attributes.
 
-[Chap 1 to Chap 3](https://mooneater0912.github.io/files/Anne_Conway_Principles/Chap4_5.pdf), concerning Christ, the son, the man, the first-born among all creatures, the mediating being between God and his creatures.
+[Chap 4 and Chap 5](https://mooneater0912.github.io/files/Anne_Conway_Principles/Chap4_5.pdf), concerning Christ, the son, the man, the first-born among all creatures, the mediating being between God and his creatures.

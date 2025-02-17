@@ -42,19 +42,6 @@ My newest CV and contact info can be found <a href="\files\CV_Zeyuan_Chen.pdf">h
 {% endif %}
 {% endfor %}
 
-<h3> Blogs </h3>
-
-{% for post in site.posts %}
-{% if post.category == "blog" %}
-{% if post.external_url == nil %}
-<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% else %}
-<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% endif %}
-{% endif %}
-{% endfor %}
 
 <h3> Projects / Practices </h3>
 
@@ -69,6 +56,23 @@ My newest CV and contact info can be found <a href="\files\CV_Zeyuan_Chen.pdf">h
 {% endif %}
 {% endif %}
 {% endfor %}
+
+
+<h3> Blogs </h3>
+
+{% for post in site.posts %}
+{% if post.category == "blog" %}
+{% if post.external_url == nil %}
+<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% else %}
+<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
+    }}</abbr><br>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+
 
 
 <h3> Translations </h3>
@@ -101,7 +105,7 @@ My newest CV and contact info can be found <a href="\files\CV_Zeyuan_Chen.pdf">h
 {% endfor %}
 
 
-<h3> All posts in the chronological order </h3>
+<!-- <h3> All posts in the chronological order </h3>
 
 {% for post in site.posts %}
 
@@ -113,4 +117,4 @@ My newest CV and contact info can be found <a href="\files\CV_Zeyuan_Chen.pdf">h
     }}</abbr><br>
 {% endif %}
 
-{% endfor %}
+{% endfor %} -->

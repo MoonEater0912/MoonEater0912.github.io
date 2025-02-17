@@ -22,4 +22,6 @@ It is clear that the ancient and modern western philosophy, as well as the comte
 3. Female philosophers: catharine-macaulay, sophie-de-grouchy, rosa-luxemburg, etc.
 4. Continental philosophy: michel-henry, moral-phenomenology, etc.
 
+I am trying to use Bayesian classifier or SVM to identify some attributes of each entry (gender, school, region, etc.), so that a more solid causal identification and inference could be conducted (are these attributes related with pagerank score or the probability of being orphan entry).
+
 

@@ -2,7 +2,7 @@
 title: "Network of Entries of Stanford Encyclopedia of Philosophy"
 date: 2025-02-17
 layout: post
-category: projecr
+category: project
 tags: [Python, Practice, Network Science]
 ---
 
@@ -21,3 +21,5 @@ It is clear that the ancient and modern western philosophy, as well as the comte
 2. Non-western philosophies: chinese-mind, chinese-phil-medicine, qing-philosophy, korean-philosophy, etc.
 3. Female philosophers: catharine-macaulay, sophie-de-grouchy, rosa-luxemburg, etc.
 4. Continental philosophy: michel-henry, moral-phenomenology, etc.
+
+

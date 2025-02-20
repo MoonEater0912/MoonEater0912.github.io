@@ -1,10 +1,12 @@
 ---
-title: "Network of Entries of Stanford Encyclopedia of Philosophy"
+title: "The Invisible in Philosophy: Network of Entries of Stanford Encyclopedia of Philosophy"
 date: 2025-02-17
 layout: post
 category: project
 tags: [Python, Practice, Network Science]
 ---
+
+\[The **extended abstract**, where you can find more figures and tables, can be found [here](https://mooneater0912.github.io/files/SEP_extended_abstract.pdf).\]
 
 I have scraped all the entries from the Stanford Encyclopedia of Philosophy, along with their interlinking relationships. The in-degree distribution of the entries roughly follows a power-law distribution (Figure below), with a few entries having extremely high in-degree, which supports the preferential attachment model. Using the PageRank algorithm, I identified the 20 most influential nodes, which can be categorized as follows:
 
@@ -22,6 +24,6 @@ It is clear that the ancient and modern western philosophy, as well as the comte
 3. Female philosophers: catharine-macaulay, sophie-de-grouchy, rosa-luxemburg, etc.
 4. Continental philosophy: michel-henry, moral-phenomenology, etc.
 
-I am trying to use Bayesian classifier or SVM to identify some attributes of each entry (gender, school, region, etc.), so that a more solid causal identification and inference could be conducted (are these attributes related with pagerank score or the probability of being orphan entry).
+I have used Naive Beyesian Classifier to feature the nodes (is_female, is_continental, is_non_western), and developed two regression models (OLS for PageRank score, while Logit for Is_Orphan) to determine these factors' influence on entries' visibility or discoverability in SEP. Detailes can be found in the extended abstract.
 
 

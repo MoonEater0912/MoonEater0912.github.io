@@ -2,7 +2,7 @@
 title: "One of Women's Opportunity Constraints in Academic Collaboration Networks"
 date: 2025-04-07
 layout: post
-category: practice
+category: project
 tags: [Python, Practice, Network Science]
 ---
 

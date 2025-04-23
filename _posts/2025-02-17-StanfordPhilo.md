@@ -6,7 +6,7 @@ category: research
 tags: [Python, Practice, Network Science]
 ---
 
-\[The **extended abstract**, which was accepted by ICSSI \(2025\) in Norrkoping \(Poster session\), and where I conducted more analyses and visualization, can be found [here](https://mooneater0912.github.io/files/SEP_extended_abstract.pdf).\]
+\[The **extended abstract**, which was accepted by ICSSI \(2025\) in Copenhagen \(Poster session\), as well as by IC2S2 \(2025\) in Norrkoping \(Parallel Session\), and where I conducted more analyses and visualization, can be found [here](https://mooneater0912.github.io/files/SEP_extended_abstract.pdf).\]
 
 I have scraped all the entries from the Stanford Encyclopedia of Philosophy, along with their interlinking relationships. The in-degree distribution of the entries roughly follows a power-law distribution (Figure below), with a few entries having extremely high in-degree, which supports the preferential attachment model. Using the PageRank algorithm, I identified the 20 most influential nodes, which can be categorized as follows:
 

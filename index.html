@@ -1,120 +1,69 @@
 ---
 layout: default
-title: Eat moon and Use magic
+title: About Me
 ---
 
-<h3> About Me </h3>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; margin-bottom: 2rem;">
+  <img src="/images/me.png" alt="My Photo" style="float: left; width: 140px; height: 140px; object-fit: cover; border-radius: 12px; margin-right: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <div style="flex: 1; min-width: 200px;">
+    <h1 style="margin-top:0;">About Me</h1>
+    <p>Welcome, and thanks for reading.</p>
+    <p>I am Chen Zeyuan, currently a master student at Uppsala University, majoring in Social Sciences. In the summer 2025, I worked as a research assistant at Aalto University, Dept. of Computer Science, on a project about academic collaboration network and labour inequality (a manuscript being prepared). I've also been collaborating with a health econometrics group at Renmin University of China for 2 years (several papers accepted). My interests lie in leveraging computational and quantitative methods to measure and understand the dynamics of culture, knowledge and social change. I am looking for a PhD position in this field. My newest CV and contact info can be found <a href="\files\CV_Zeyuan_Chen.pdf">here</a>.</p>
+    <p>Specifically, my research interests include - </p>
+    <ul>
+        <li>Computational social science / cultural analyses</li>
+        <li>Causal inference with network analysis and NLP</li>
+        <li>French philosophy and intellectuals in 20th century</li>
+        <li>Philosophy of statistics and computation</li>
+    </ul>
+    <p>Before pursuing social science studies, I earned my undergraduate degree in philosophy and sociology, where I focused on probability, contingency, and cybernetics, and wrote my thesis on these topics. I am now working on my master thesis, which aims to conduct a distant reading on the french philosophy journal articles during 1950s to 1980s, following Bourdieu's discussion in Academicus. I have also done a “toy” research project on a digital knowledge-base about philosophy, combining NLP techniques and network analyses, which was accepted by IC2S2 (Norrköping) and ICSSI (Copenhagen).</p>
+    <p>I love reading, city walking, programming and playing video games.</p>
+  </div>
+</div>
 
-<p>Welcome, and thanks for reading.</p>
+---
 
-<p>I am Chen Zeyuan, currently a first-year master student at Uppsala University, majoring in Social Sciences.
-    My academic interests lie in leveraging computational and quantitative methods to measure and understand the
-    dynamics of
-    knowledge production and social change,
-    enabling causal identification. I am particularly interested in the potential driving factors of social inequality
-    (in
-    knowledge representation, health states, etc.).
+## News
 
-    Before pursuing social science studies,
-    I earned my undergraduate degree in philosophy and sociology,
-    where I focused on probability, contingency, and cybernetics, and wrote my thesis on these topics.</p>
+<ul id="news-list" style="list-style: disc inside; padding-left: 0;">
+  <li><strong>2025-07-24</strong>I will be presenting my works on 1. semantic transform of SciFi literature (poster) and 2. mapping and navigating Stanford Encyclopedia of Philosophy (oral) on IC2S2, Norrkoping.</li>
+  <li><strong>2025-06-18</strong>I will be presenting my works on mapping Stanford Encyclopedia of Philosophy on ICSSI, Copenhagen.</li>
+  <li><strong>2025-05-03</strong>I will be working as a research assistant at Aalto University for 3 months, on a project about leaky pipeline phenomenon in the academia, using network analysis, supervised by Keller Barbara.</li>
+  <li><strong>2024-09-02</strong>I will be studying at Uppsala University, Department of Informatics and Media, majoring in social sciences, with a full scholarship.</li>
+  <!-- 你可以继续添加更多历史动态 -->
+</ul>
+<span id="toggle-news-link" style="display:inline-block; margin-top:0.5rem; color:#222; font-size:1rem; cursor:pointer; transition:color 0.2s; text-decoration:underline;">more</span>
 
-<p>This summer I am going to Aalto University for a 3-month research internship in the field of computational social
-    science!</p>
+<script>
+  const newsList = document.getElementById('news-list');
+  const newsItems = newsList.querySelectorAll('li');
+  const link = document.getElementById('toggle-news-link');
+  let expanded = false;
 
-<h3> CV </h3>
+  function updateNewsDisplay() {
+    newsItems.forEach((item, idx) => {
+      if (!expanded && idx >= 3) {
+        item.style.display = 'none';
+      } else {
+        item.style.display = '';
+      }
+    });
+    link.textContent = expanded ? 'less' : 'more';
+  }
 
-My newest CV and contact info can be found <a href="\files\CV_Zeyuan_Chen.pdf">here</a>
-.
+  link.addEventListener('click', function() {
+    expanded = !expanded;
+    updateNewsDisplay();
+  });
 
+  // 初始状态
+  updateNewsDisplay();
 
-<h3> Research / Publications </h3>
-
-{% for post in site.posts %}
-{% if post.category == "research" %}
-{% if post.external_url == nil %}
-<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% else %}
-<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% endif %}
-{% endif %}
-{% endfor %}
-
-
-<h3> Projects / Practices </h3>
-
-{% for post in site.posts %}
-{% if post.category == "project" %}
-{% if post.external_url == nil %}
-<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% else %}
-<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% endif %}
-{% endif %}
-{% endfor %}
-
-
-<h3> Blogs </h3>
-
-{% for post in site.posts %}
-{% if post.category == "blog" %}
-{% if post.external_url == nil %}
-<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% else %}
-<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% endif %}
-{% endif %}
-{% endfor %}
-
-
-
-
-<h3> Translations </h3>
-
-{% for post in site.posts %}
-{% if post.category == "translation" %}
-{% if post.external_url == nil %}
-<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% else %}
-<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% endif %}
-{% endif %}
-{% endfor %}
-
-
-<h3> Recipes </h3>
-
-{% for post in site.posts %}
-{% if post.category == "recipe" %}
-{% if post.external_url == nil %}
-<a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% else %}
-<a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% endif %}
-{% endif %}
-{% endfor %}
-
-
-<!-- <h3> All posts in the chronological order </h3>
-
-{% for post in site.posts %}
-
-{% if post.external_url == nil %}
-<a>{{ post.category }}: </a><a href="{{ post.url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% else %}
-<a>{{ post.category }}: </a><a href="{{ post.external_url }}">{{ post.title }} </a><abbr>{{ post.date | date_to_string
-    }}</abbr><br>
-{% endif %}
-
-{% endfor %} -->
+  // 悬停变色
+  link.addEventListener('mouseenter', function() {
+    link.style.color = '#5b7664';
+  });
+  link.addEventListener('mouseleave', function() {
+    link.style.color = '#222';
+  });
+</script>

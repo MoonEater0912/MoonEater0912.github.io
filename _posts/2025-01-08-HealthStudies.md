@@ -23,7 +23,7 @@ This page is for the research supervised by and co-authored with [Ye Zhang](http
 <div class="research-item">
   <p><strong>2. Socio-demographic characteristics associated with SF-6D v2 utility scores in patients undergoing dialysis in China: Contributions of the Quantile Regression</strong>: Accepted by <em>Health and Quality of Life Outcomes</em>.</p>
   <div style="display: flex; gap: 0.5rem;">
-    <a href="#" class="custom-button" onclick="toggleAbstract('abstract1'); return false;">Abstract</a>
+    <a href="#" class="custom-button" onclick="toggleAbstract('abstract2'); return false;">Abstract</a>
     <!-- <a href="https://github.com/MoonEater0912/ALDVMM_Cross_Validation" target="_blank" class="custom-button">GitHub</a> -->
   </div>
   <div id="abstract2" style="display:none; border:1px dashed #aaa; padding:0.5rem; margin-top:0.5rem;">

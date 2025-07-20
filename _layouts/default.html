@@ -110,11 +110,14 @@
         .card {
             display: flex;
             flex-direction: row;
-            background: #f2f6db;
-            /* border-radius: 2px; */
+            background: #e0f2ee;
+            border-radius: 2px;
             overflow: hidden;
             /* border: 1px solid #b8bec1; */
-            transition: background 0.3s, border-color 0.3s;
+            transition: background 0.2s, border-color 0.2s;
+            box-shadow: 
+                0 4px 8px rgba(0,0,0,0.1),   /* 第一层：柔和投影 */
+                0 0 0 1px rgba(0,0,0,0.05); /* 第二层：细描边 */
         }
         .card-image {
             display: flex;

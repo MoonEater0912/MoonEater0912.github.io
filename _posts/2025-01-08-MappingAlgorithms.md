@@ -1,5 +1,5 @@
 ---
-title: "Quantitative Health Studies on Quality of Life and Others"
+title: "Quantitative Health Studies on Quality of Life and Social Determinants of Diseases"
 date: 2025-01-08
 layout: post
 category: research

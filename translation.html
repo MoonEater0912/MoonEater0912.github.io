@@ -1,0 +1,22 @@
+---
+layout: default
+title: Research
+---
+
+<h1 style="margin-top:0;">Translaiton</h1>
+
+<div class="card-container">
+  {% assign research_posts = site.posts | where: "category", "translation" %}
+  {% for post in research_posts %}
+  <div class="card">
+    <div class="card-content">
+      <h3>
+        <a href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}">
+          {{ post.title }}
+        </a>
+      </h3>
+      <p><i>First Publication Date: {{ post.date | date_to_string }}</i></p>
+    </div>
+  </div>
+  {% endfor %}
+</div>

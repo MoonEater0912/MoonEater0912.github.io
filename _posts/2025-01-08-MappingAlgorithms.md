@@ -1,9 +1,10 @@
 ---
-title: "Mapping Algotithms from KDQoL-36 to SF-6D/EQ-5D-5L"
+title: "Quantitative Health Studies on Quality of Life and Others"
 date: 2025-01-08
 layout: post
 category: research
 tags: [Statistics, R, Publication, Methodology]
+image: "/images/mapping_sf6dv2.png"
 ---
 
 \[ a link to the article will be here after published \]

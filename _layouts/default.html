@@ -96,28 +96,7 @@
         .social-icons a:hover {
             color: #5b7664;
         }
-        body.dark-mode {
-            background: #444040;
-            color: #f7f3e6;
-        }
-        body.dark-mode * {
-            background-color: inherit;
-            color: inherit;
-        }
-        /* body.dark-mode nav {
-            background: #2b2b2b;
-            border-bottom: 1px solid #555;
-        }
-        body.dark-mode footer {
-            background: #2b2b2b;
-            border-top: 1px solid #555;
-        } */
-        body.dark-mode a {
-            color: #efe7d3;
-        }
-        body.dark-mode a:hover {
-            color: #ccc;
-        }
+
         
         /* Cards */
         .card-container {
@@ -131,7 +110,7 @@
         .card {
             display: flex;
             flex-direction: row;
-            background: #e3e3e3;
+            background: #f2f6db;
             /* border-radius: 2px; */
             overflow: hidden;
             /* border: 1px solid #b8bec1; */
@@ -182,24 +161,6 @@
         }
 
 
-        /* Cards dark mode */
-        body.dark-mode .card {
-            background: #726161;
-            /* border-color: #555; */
-        }
-        body.dark-mode .card-content a {
-            color: #ebeae6;
-        }
-        body.dark-mode .card-content a:hover {
-            color: #ccc;
-        }
-        body.dark-mode .card-content p {
-            color: #f3f1ea;
-        }
-        body.dark-mode .card-placeholder {
-            background: #555;
-            color: #ddd;
-        }
 
 
         /* Responsive */
@@ -260,15 +221,7 @@
     </footer>
     <script>
     document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        const icon = document.getElementById('dark-mode-toggle');
-        if (document.body.classList.contains('dark-mode')) {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        } else {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-        }
+        alert("Dark mode is still under construction")
     });
     </script>
 </body>

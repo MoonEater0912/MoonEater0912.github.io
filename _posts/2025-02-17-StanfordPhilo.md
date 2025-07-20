@@ -4,7 +4,7 @@ date: 2025-02-17
 layout: post
 category: research
 tags: [Python, Practice, Network Science]
-excerpt: "haha test"
+excerpt: "\[The **extended abstract**, which was accepted by ICSSI \(2025\) in Copenhagen \(Poster session\), as well as by IC2S2 \(2025\) in Norrkoping \(Parallel Session\), and where I conducted more analyses and visualization, can be found [here](https://mooneater0912.github.io/files/SEP_extended_abstract.pdf).\]"
 image: "/images/me.png"
 ---
 

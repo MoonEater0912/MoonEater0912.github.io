@@ -11,8 +11,8 @@
     <style>
         html, body {
             height: 100%;
-            margin: 0;
-            padding: 0;
+            margin: 0, auto;
+            padding: 0, 1rem;
             font-family: 'Roboto Slab', sans-serif;
             font-size: 18px;
             font-optical-sizing: auto;
@@ -113,7 +113,7 @@
             border-top: 1px solid #555;
         } */
         body.dark-mode a {
-            color: #efe7d3;
+            color: #f9f8f5;
         }
         body.dark-mode a:hover {
             color: #ccc;
@@ -131,20 +131,15 @@
         .card {
             display: flex;
             flex-direction: row;
-            background: #faf9f6;
-            /* border-radius: 2px; */
+            background: #f5f6e6;
+            border-radius: 10px;
             overflow: hidden;
-            /* border: 1px solid #b8bec1; */
+            border: 1px solid #b8bec1;
             transition: background 0.3s, border-color 0.3s;
         }
-        .card-image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
         .card-image img {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 140px;
             object-fit: cover;
         }
         .card-placeholder {
@@ -174,27 +169,35 @@
         }
         .card-content a {
             text-decoration: none;
-            color: #3b5c4c;
+            color: #222;
         }
         .card-content a:hover {
             text-decoration: underline;
-            color: #5b7664
         }
-
+        @media (max-width: 600px) {
+            .card {
+                flex-direction: column;
+            }
+            .card-image img,
+            .card-placeholder {
+                width: 100%;
+                height: auto;
+            }
+        }
 
         /* Cards dark mode */
         body.dark-mode .card {
-            background: #433d3d;
-            /* border-color: #555; */
+            background: #333;
+            border-color: #555;
         }
         body.dark-mode .card-content a {
-            color: #ebeae6;
+            color: #f9f8f5;
         }
         body.dark-mode .card-content a:hover {
             color: #ccc;
         }
         body.dark-mode .card-content p {
-            color: #f3f1ea;
+            color: #f9f8f5;
         }
         body.dark-mode .card-placeholder {
             background: #555;

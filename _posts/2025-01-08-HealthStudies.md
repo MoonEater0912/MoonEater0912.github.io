@@ -12,7 +12,7 @@ This page is for the research supervised by and co-authored with [Ye Zhang](http
 <div class="research-item">
   <p><strong>1. Mapping KDQoL-36 onto EQ-5D-5L and SF-6Dv2 in patients undergoing dialysis in China</strong>: Accepted by <em>Value in Health - Regional Issues</em>.</p>
   <div style="display: flex; gap: 0.5rem;">
-    <button class="custom-button" onclick="toggleAbstract('abstract1')">Abstract</button>
+    <a href="#" class="custom-button" onclick="toggleAbstract('abstract1'); return false;">Abstract</a>
     <a href="https://github.com/MoonEater0912/ALDVMM_Cross_Validation" target="_blank" class="custom-button">GitHub</a>
   </div>
   <div id="abstract1" style="display:none; border:1px dashed #aaa; padding:0.5rem; margin-top:0.5rem;">
@@ -23,10 +23,8 @@ This page is for the research supervised by and co-authored with [Ye Zhang](http
 <div class="research-item">
   <p><strong>2. Socio-demographic characteristics associated with SF-6D v2 utility scores in patients undergoing dialysis in China: Contributions of the Quantile Regression</strong>: Accepted by <em>Health and Quality of Life Outcomes</em>.</p>
   <div style="display: flex; gap: 0.5rem;">
-    <button onclick="toggleAbstract('abstract2')">Abstract</button>
-    <a href="#" target="_blank">
-      <button>GitHub</button>
-    </a>
+    <a href="#" class="custom-button" onclick="toggleAbstract('abstract1'); return false;">Abstract</a>
+    <!-- <a href="https://github.com/MoonEater0912/ALDVMM_Cross_Validation" target="_blank" class="custom-button">GitHub</a> -->
   </div>
   <div id="abstract2" style="display:none; border:1px dashed #aaa; padding:0.5rem; margin-top:0.5rem;">
     Generic preference-based instruments, such as the Short Form 6-Dimensions (SF-6D) and EuroQol 5-Dimensions (EQ-5D), can generate utility scores that facilitate the estimation of health-related quality of life (HRQoL) which is commonly used in cost-utility analysis. This study investigated the associations between utility scores and potential socio-demographic factors in Chinese patients with dialysis using quantile regression. Patients were recruited in a multicenter survey conducted between November 2023 and January 2024 for dialysis patients in China. Patient responses to the SF-6D version 2 (SF-6D v2) instruments were used to calculate utility scores. The relationships between utility scores and potential socio-demographic factors were examined using both Ordinary Least Squares (OLS) and quantile regression models. The Wald test was employed to test the differences in coefficients across quantiles in quantile regression. Model performance was assessed using 5-fold cross-validation. A total of 378 patients were included. Age, education level, having a loan due to illness, currently working, monthly income > 8000 and number of comorbidities were associated with utility scores. The quantile regression coefficients and Wald test suggested that the size of the associations between the utility scores and factors varied along with the utility score distribution. Quantile regression yielded more accurate fitted and predicted values compared to OLS regression. Quantile regression offers a valuable complement in analyzing factors associated with utility scores among Chinese dialysis patients. For policymakers, differentiated nonclinical strategies may be needed to improve HRQoL across varying health states within this population.

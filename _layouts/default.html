@@ -29,6 +29,18 @@
         }
         main p {
             text-align: justify;
+            hyphens: auto;
+        }
+        main a {
+            color: #3b5c4c;   
+            text-decoration: underline;
+            font-weight: 440;         
+            transition: color 0.2s;    
+        }
+
+        main a:hover {
+            color: #5b7664;  
+            text-decoration: underline;
         }
         nav {
             background: #f9f8f5;
@@ -96,10 +108,13 @@
             }
             nav a {
                 margin-left: 1rem;
-                font-size: 0.98rem;
+                font-size: 0.95rem;
             }
             main {
                 margin: 1.5rem auto 1rem auto;
+            }
+            main p {
+                text-align: left;
             }
         }
     </style>

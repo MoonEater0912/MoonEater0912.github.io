@@ -4,7 +4,6 @@ date: 2025-02-17
 layout: post
 category: research
 tags: [Python, Practice, Network Science]
-excerpt: "I have scraped all the entries from the Stanford Encyclopedia of Philosophy, along with their interlinking relationships."
 image: "/images/SEPindegree.png"
 ---
 

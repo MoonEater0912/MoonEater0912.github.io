@@ -2,21 +2,12 @@
 layout: default
 ---
 
-<!-- <div id="post">
-    <h2><a href="{{ page.url }}">
-            {{ page.title }}
-        </a></h2>
-    <div id="date">published {{ page.date | date_to_string }}</div>
-    {{ content }}
-</div> -->
-
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>{{ page.title }}</title>
 
     <!-- Add MathJax CDN Script -->
@@ -35,9 +26,7 @@ layout: default
 
 <body>
     <div id="post">
-        <h2><a href="{{ page.url }}">
-                {{ page.title }}
-            </a></h2>
+        <h2 style="margin-top:0;">{{ page.title }}</h2>
         <div id="date">published {{ page.date | date_to_string }}</div>
         {{ content }}
     </div>

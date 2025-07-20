@@ -4,7 +4,7 @@ date: 2025-02-17
 layout: post
 category: research
 tags: [Python, Practice, Network Science]
-excerpt: "\[The **extended abstract**, which was accepted by ICSSI \(2025\) in Copenhagen \(Poster session\), as well as by IC2S2 \(2025\) in Norrkoping \(Parallel Session\), and where I conducted more analyses and visualization"
+excerpt: "I have scraped all the entries from the Stanford Encyclopedia of Philosophy, along with their interlinking relationships. The in-degree distribution of the entries roughly follows a power-law distribution (Figure below), with a few entries having extremely high in-degree, which supports the preferential attachment model. Using the PageRank algorithm, I identified the 20 most influential nodes, which can be categorized as follows:"
 image: "/images/me.png"
 ---
 

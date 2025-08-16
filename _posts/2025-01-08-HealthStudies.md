@@ -4,7 +4,7 @@ date: 2025-01-08
 layout: post
 category: research
 tags: [Statistics, R, Publication, Methodology]
-image: "/images/mapping_sf6dv2.png"
+image: "/images/quantile_regression.png"
 ---
 
 This page is for the research supervised by and co-authored with [Ye Zhang](https://www.researchgate.net/profile/Ye-Zhang-58), when I worked as a research assistant in the field of health econometrics:

@@ -31,6 +31,17 @@ This page is for the research supervised by and co-authored with [Ye Zhang](http
   </div>
 </div>
 
+<div class="research-item">
+  <p><strong>3. Indoor Mold Odor Exposure and Cognitive Function in Older Adults: A Longitudinal Analysis Based on CLHLS Dataset in China</strong>: Under preparation.</p>
+  <div style="display: flex; gap: 0.5rem;">
+    <a href="#" class="custom-button" onclick="toggleAbstract('abstract2'); return false;">Abstract</a>
+    <!-- <a href="https://github.com/MoonEater0912/ALDVMM_Cross_Validation" target="_blank" class="custom-button">GitHub</a> -->
+  </div>
+  <div id="abstract2" style="display:none; border:1px dashed #aaa; padding:0.5rem; margin-top:0.5rem;">
+    Environmental factors such as air pollution have been linked to cognitive function decline through neuroinflammatory and oxidative stress pathways. Indoor mold odor, a common air quality issue, may exacerbate cognitive deterioration in older adults via similar physiological mechanisms. This study systematically examined the association between indoor mold odor exposure and cognitive function among older adults in China. Data were obtained from three waves of the nationally representative survey of China Longitudinal Healthy Longevity Survey between 2011/12 - 2018. Modified Mini-Mental Examination (MMSE) was used to measure cognition function. Random-effect Panel Tobit model was used to estimate the effect of indoor mold odor on cognition function. The causal effect robustness was tested using housing water leakage/damage as an instrumental variable, together with other robustness checks. Subgroup analysis was conducted to explore the heterogeneity of the effect. Indoor mold odor exposure leads to the decline of cognitive function (Coef. = -0.508). This association remains robust when the outcome variable is recoded and when the sample is restricted. Instrumental variable regression further confirmed the robustness of the causal effect, and implicated the role of housing water leakage. Subgroup analyses revealed a stronger negative association in females, individuals with lower education, and rural residents. Indoor mold odor was associated with cognition impairment among elderly populations in China, highlighting the importance of public health policies targeting indoor air quality. The observed heterogeneity by gender, education, and residence suggests that individual susceptibility and social determinants influence the mold-cognition pathway through multiple mechanisms.
+  </div>
+</div>
+
 <script>
 function toggleAbstract(id) {
   var elem = document.getElementById(id);

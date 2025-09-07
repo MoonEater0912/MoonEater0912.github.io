@@ -15,9 +15,12 @@ Text data was requested from [JSTOR](https://www.jstor.org). I selected 5 most t
 - Revue des Sciences Philosophiques et Théologiques
 - Revue Internationale de Philosophie
 
-I kept the authors having at least 2 publication recordings during 1950 - 1989 as samples. After cleaning and normalizing authors' names (really a HUGE task), I collected author metadata (gender, nationality, birth/death year/place, employer/institution) from [WikiData](https://www.wikidata.org/wiki/Wikidata:Main_Page) and [BNF](https://data.bnf.fr), using Python.
+I kept the authors having at least 2 publication recordings during 1950 - 1989 as samples. After cleaning and normalizing authors' names (really a HUGE task), I collected author metadata (gender, nationality, birth/death year/place, employer/institution) from [WikiData](https://www.wikidata.org/wiki/Wikidata:Main_Page) and [BNF](https://data.bnf.fr) (which is usually linked with IdRef and ISNI), using Python. There are about one fourth of my samples of whom the metadata is unaccessible from WikiData or BNF. For these cases, I tried to have their gender, birth date/place and institution from other sources, like obituaries, footnotes in their publications, interview recording, online philosophy encyclopedias, etc. 
 
-I plan to analyze the dataset from 3 layers:
+But still, there are some authors whose metadata I cannot find, even though I know exactly what they studied, translated, and published. It is sad, as it feels as if they, as intellectuals, have entirely disappeared from human history of ideas. I even found the LinkedIn or Facebook accounts of some of them, witnessing their passion for art, writing and life, only to later realize that they had passed away just a few years ago. In the future, I hope to compile profiles and a database documenting the works and thoughts details of the overlooked philosophers.
+
+
+For the next step, I plan to analyze this dataset from 3 layers:
 - Population layer: analyzing biographical and institutional data
 - Document layer: looking at the semantic and topic transform through the 40 years, especially the comparion of before and after 1968
 - Intersection layer: dynamically mapping the conceptual relevance network with authors' social space positions

@@ -24,3 +24,5 @@ For the next step, I plan to analyze this dataset from 3 layers:
 - Population layer: analyzing biographical and institutional data
 - Document layer: looking at the semantic and topic transform through the 40 years, especially the comparion of before and after 1968
 - Intersection layer: dynamically mapping the conceptual relevance network with authors' social space positions
+
+I am now trying different ways of representing documents numerically - including fine tuning BERTopic models, Sentence2Vec models, etc.

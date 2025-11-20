@@ -168,7 +168,7 @@ title: About Me
         const parsedText = isUser ? text : marked.parse(text);
 
         div.innerHTML = `
-            <div class="${bubbleStyle} p-3 max-w-[90%] text-xs prose prose-p:my-0.5 prose-a:text-theme-accent ${isUser ? 'prose-invert' : ''}">
+            <div class="${bubbleStyle} p-3 max-w-[90%] text-xs">
                 ${parsedText}
             </div>
         `;

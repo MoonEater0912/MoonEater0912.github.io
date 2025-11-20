@@ -306,7 +306,14 @@
                 // 注意：为了节省 token 和上下文，这里只发送了当前 prompt
                 // 如果需要由上下文记忆，需要维护一个 contents 数组
                 const payload = {
-                    systemInstruction: systemInstructionText,
+                    systemInstruction:{
+                        "parts": [
+                        {
+                            "text": systemInstructionText
+                        }
+                        ]
+                    },
+                    // systemInstruction: systemInstructionText,
                     contents: [{
                         parts: [{ text: text }]
                     }]

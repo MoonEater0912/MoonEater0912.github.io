@@ -4,7 +4,56 @@ title: About Me
 ---
 
 <div style="margin-bottom: 2rem; overflow: hidden;">
-  <img src="/images/me.png" alt="My Photo" style="float: left; width: 240px; height: 340px; object-fit: cover; border-radius: 12px; margin-right: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+  <!-- <img src="/images/me.png" alt="My Photo" style="float: left; width: 240px; height: 340px; object-fit: cover; border-radius: 12px; margin-right: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08);"> -->
+
+  
+  <div id="chat-container" 
+        class="float-left w-[240px] h-[340px] mr-6 mb-4 rounded-xl shadow-md flex flex-col bg-theme-bg border border-theme-text relative overflow-hidden">
+      
+      <!-- 1. 头部 (为适应小尺寸，调整内边距) -->
+      <div class="p-3 border-b border-theme-text flex justify-between items-center bg-theme-bg shrink-0">
+          <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-theme-text rounded-full"></div>
+              <span class="text-sm font-bold tracking-wide">ASK ME ANYTHING</span>
+          </div>
+          <!-- 可选：清空对话按钮 -->
+          <button onclick="location.reload()" class="text-xs text-theme-text hover:text-theme-accent transition-colors underline decoration-theme-accent">
+              RESET
+          </button>
+      </div>
+
+      <!-- 2. 聊天记录区域 (为适应小尺寸，调整内边距和字体) -->
+      <div id="chat-messages" class="flex-1 overflow-y-auto p-3 space-y-3 scrollbar-hide bg-theme-bg text-sm">
+          <!-- 欢迎语 -->
+          <div class="flex justify-start">
+              <!-- AI 气泡风格：透明背景，带边框，纯文本感 -->
+              <div class="border border-theme-text bg-white p-3 max-w-[90%] text-xs shadow-[2px_2px_0px_0px_rgba(51,51,51,0.1)]">
+                  <p class="m-0">Hello, I will answer all your questions about myself!</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- 3. 输入区域 (底部固定，为适应小尺寸，调整高度) -->
+      <div class="p-0 border-t border-theme-text bg-theme-bg shrink-0">
+          <div class="flex items-stretch h-10">
+              <!-- 输入框：无边框，占满剩余空间 -->
+              <input type="text" id="user-input" 
+                      class="flex-1 bg-transparent px-3 text-theme-text placeholder-gray-400 focus:outline-none font-roboto-slab text-xs"
+                      placeholder="type your question..." autocomplete="off">
+              
+              <!-- 发送按钮：左侧边框分割，扁平风格 -->
+              <button id="send-btn" class="w-10 border-l border-theme-text hover:bg-theme-text hover:text-theme-bg transition-colors flex items-center justify-center group disabled:opacity-50 disabled:cursor-not-allowed">
+                  <i class="fas fa-arrow-right text-base group-hover:translate-x-1 transition-transform"></i>
+              </button>
+          </div>
+      </div>
+      
+      <!-- 底部版权/模型说明 (极小字体) -->
+      <div class="absolute -bottom-6 right-0 text-xs text-gray-400 font-sans">
+          Model - Gemini 1.5 Flash
+      </div>
+  </div>
+
   <h1 style="margin-top:0;">About Me</h1>
   <p>I am Zeyuan Chen (陈 泽远). I'm from a small coastal county in southeastern mainland China. My favorite food includes <a href="https://zh.wikipedia.org/wiki/长乐冰饭">iced rice</a>, <a href="https://en.wikipedia.org/wiki/Chaoshan_beef_hotpot">Chaoshan beef hotpot</a>, and <a href="https://en.wikipedia.org/wiki/Luosifen">luosifen</a>. After one year of studying mathematics, I completed a double bachelor's degree in Philosophy and Sociology at Beijing Normal University. I am currently a master student in Social Sciences at Uppsala University (graduating in 2026). </p>
   
@@ -65,4 +114,158 @@ title: About Me
   link.addEventListener('mouseleave', function() {
     link.style.color = '#222';
   });
+</script>
+
+<script>
+    /**
+     * 配置区域
+     */
+    const CONFIG = {
+        API_KEY: "AIzaSyBxMhSblQe8bUeuad2hI4D9GdD8wdeSHQ0", // 🔴 请在此填入 API Key
+        MODEL_NAME: "gemini-1.5-flash",
+        API_URL: "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
+    };
+
+    /**
+     * 知识库
+     */
+    const KNOWLEDGE_BASE = {
+        profile: {
+            name: "Zeyuan Chen",
+            role: "Master Student in Social Sciences at Uppsala University",
+        },
+        interests: ["Web Typography", "Generative Art", "Minimalist UI"],
+        contact: "alex.dev@example.com"
+    };
+
+    const SYSTEM_PROMPT = `
+    你是由 ${KNOWLEDGE_BASE.profile.name} 创建的 AI 助手。
+    你的语言风格应该匹配网站的视觉风格：
+    1. 冷静、客观、简洁。
+    2. 避免使用过多的表情符号。
+    3. 像一位在画廊里轻声交谈的策展人。
+    
+    知识库：${JSON.stringify(KNOWLEDGE_BASE)}
+    `;
+
+    const sendBtn = document.getElementById('send-btn');
+    const userInput = document.getElementById('user-input');
+    const messagesContainer = document.getElementById('chat-messages');
+
+    // 添加消息到 UI
+    function appendMessage(text, sender) {
+        const div = document.createElement('div');
+        const isUser = sender === 'user';
+        
+        // 调整动画类名以适应小尺寸
+        div.className = `flex ${isUser ? 'justify-end' : 'justify-start'} animate-fade-in`;
+
+        // 样式逻辑：
+        const bubbleStyle = isUser 
+            ? 'bg-theme-text text-theme-bg border border-theme-text' 
+            : 'bg-white text-theme-text border border-theme-text shadow-[2px_2px_0px_0px_rgba(51,51,51,0.1)]'; // 轻微调整阴影值
+
+        const parsedText = isUser ? text : marked.parse(text);
+
+        div.innerHTML = `
+            <div class="${bubbleStyle} p-3 max-w-[90%] text-xs prose prose-p:my-0.5 prose-a:text-theme-accent ${isUser ? 'prose-invert' : ''}">
+                ${parsedText}
+            </div>
+        `;
+        
+        messagesContainer.appendChild(div);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    // 显示 Loading 动画
+    function showTyping() {
+        const div = document.createElement('div');
+        div.id = 'typing-indicator';
+        div.className = 'flex justify-start';
+        div.innerHTML = `
+            <div class="bg-white border border-theme-text p-3 shadow-[2px_2px_0px_0px_rgba(51,51,51,0.1)] flex space-x-2 items-center">
+                <div class="w-1.5 h-1.5 rounded-full typing-dot"></div>
+                <div class="w-1.5 h-1.5 rounded-full typing-dot"></div>
+                <div class="w-1.5 h-1.5 rounded-full typing-dot"></div>
+            </div>
+        `;
+        messagesContainer.appendChild(div);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    function removeTyping() {
+        const indicator = document.getElementById('typing-indicator');
+        if (indicator) indicator.remove();
+    }
+
+    // 发送逻辑
+    async function sendMessage() {
+        const text = userInput.value.trim();
+        if (!text) return;
+        
+        if (!CONFIG.API_KEY) {
+            appendMessage("There's something wrong with API key.", "model");
+            return;
+        }
+
+        userInput.value = '';
+        appendMessage(text, 'user');
+        showTyping();
+
+        try {
+            // 1. 实现指数退避 (Exponential Backoff)
+            const MAX_RETRIES = 5;
+            let attempt = 0;
+            let data = null;
+            
+            while (attempt < MAX_RETRIES) {
+                try {
+                    const response = await fetch(`${CONFIG.API_URL}?key=${CONFIG.API_KEY}`, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            contents: [{ role: "user", parts: [{ text: text }] }],
+                            systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+                            generationConfig: { temperature: 0.7 }
+                        })
+                    });
+
+                    data = await response.json();
+                    if (!response.ok || data.error) {
+                          // 如果是 429 (Quota exceeded) 或其他错误，进行重试
+                        if (response.status === 429 || (data.error && data.error.code === 429)) {
+                            throw new Error("Rate limit exceeded, retrying...");
+                        }
+                        // 其他非重试错误直接抛出
+                        if (data.error) throw new Error(data.error.message);
+                        throw new Error("API call failed with status: " + response.status);
+                    }
+                    // 成功，跳出循环
+                    break;
+                } catch (error) {
+                    attempt++;
+                    if (attempt >= MAX_RETRIES) {
+                        throw error; // 达到最大重试次数，抛出最终错误
+                    }
+                    const delay = Math.pow(2, attempt) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+            
+            removeTyping();
+
+            const reply = data.candidates[0].content.parts[0].text;
+            appendMessage(reply, 'model');
+            
+        } catch (error) {
+            removeTyping();
+            console.error("Connection Error:", error);
+            appendMessage(`Connection broke down or rate limit was reached: ${error.message.includes("Rate limit") ? "Please try later" : "Please check your connection or API Key"}`, 'model');
+        }
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendMessage();
+    });
 </script>

@@ -78,13 +78,7 @@
             margin: 2.5rem auto 2rem auto;
             padding: 0 1rem;
         }
-        footer {
-            background: #f7f6f1;
-            border-top: 1px solid #b8bec1;
-            text-align: center;
-            padding: 0.3rem 0 0.3rem 0;
-            margin-top: auto;
-        }
+
         .social-icons {
             display: flex;
             justify-content: center;
@@ -168,27 +162,6 @@
             color: #e6bfa7;
         }
 
-        /* Responsive */
-        /* @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                height: auto;
-                padding: 0.5rem 1rem;
-            }
-            nav .nav-title {
-                margin-bottom: 0.5rem;
-            }
-            nav a {
-                margin-left: 1rem;
-                font-size: 0.95rem;
-            }
-            main {
-                margin: 1.5rem auto 1rem auto;
-            }
-            main p {
-                text-align: left;
-            }
-        } */
     </style>
 </head>
 
@@ -197,10 +170,9 @@
         <span class="nav-title">Zeyuan Chen</span>
         <a href="/">About Me</a>
         <a href="/research.html">Research</a>
-        <!-- <a href="/blog.html">Blog</a> -->
+        <a href="/chat.html">Chat</a>
         <a href="/translation.html">Translation</a>
         <a href="/contact.html">Contact</a>
-        <span id="dark-mode-toggle" class="fa-solid fa-moon" style="cursor:pointer; margin-left:2rem;"></span>
     </nav>
 
 
@@ -208,24 +180,5 @@
         {{ content }}
     </main>
 
-
-    <!-- <footer>
-        <div class="social-icons">
-            <a href="https://github.com/MoonEater0912" target="_blank" title="GitHub">
-            <span class="fa-brands fa-github"></span>
-            </a>
-            <a href="mailto:zeyuan.chen.1371@student.uu.se" title="Email">
-            <span class="fa-regular fa-envelope"></span>
-            </a>
-        </div>
-    </footer> -->
-
-
-    
-    <script>
-    document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-        alert("Dark mode is still under construction")
-    });
-    </script>
 </body>
 </html>

@@ -229,19 +229,18 @@
         <span class="nav-title">Zeyuan Chen</span>
         <a href="/">About Me</a>
         <a href="/research.html">Research</a>
-        <!-- <a href="/blog.html">Blog</a> -->
         <a href="/translation.html">Translation</a>
         <a href="/contact.html">Contact</a>
-        <span id="dark-mode-toggle" class="fa-solid fa-moon" style="cursor:pointer; margin-left:2rem;"></span>
+        <a href="/chat.html">Chat</a>
     </nav>
 
     <main>
-        <p>Ask me anything about my research or interests.</p>
+        <p>Ask me anything about my interests, experiences, skill set, and more!</p>
         
         <div id="chat-container">
             <div id="chat-history">
                 <div class="message bot">
-                    <div class="content">Hello. I am an AI assistant for this academic profile. How can I help you today?</div>
+                    <div class="content">Hello, I am Zeyuan Chen, currently a 2nd-year master student at Uppsala University. I am looking for a PhD position in the field of cultural / scientific sociology and computational social science.</div>
                 </div>
             </div>
             
@@ -260,6 +259,11 @@
         
         // Gemini 2.0 Flash 模型端点
         const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GOOGLE_API_KEY}`;
+
+        // Knowlegde base file path
+        const KNOWLEDGE_BASE_FILE = 'knowledge_base.txt';
+        // 全局变量用于存储加载的知识库内容
+        let systemInstructionText = '';
         // =================================================
 
         const chatHistory = document.getElementById('chat-history');
@@ -302,6 +306,9 @@
                 // 注意：为了节省 token 和上下文，这里只发送了当前 prompt
                 // 如果需要由上下文记忆，需要维护一个 contents 数组
                 const payload = {
+                    config: {
+                        systemInstruction: systemInstructionText,
+                    },
                     contents: [{
                         parts: [{ text: text }]
                     }]
@@ -394,6 +401,23 @@
             }
         });
 
+
+        // 异步加载知识库文件
+        async function loadKnowledgeBase() {
+            try {
+                const response = await fetch(KNOWLEDGE_BASE_FILE);
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${KNOWLEDGE_BASE_FILE}: ${response.statusText}`);
+                }
+                systemInstructionText = await response.text();
+                console.log("Knowledge Base loaded successfully.");
+            } catch (error) {
+                console.error("Error loading knowledge base:", error);
+                appendMessage("Error: Failed to load background information. Responses might be generic.", 'bot');
+            }
+        }
+        // 页面加载时调用
+        loadKnowledgeBase();
     </script>
 </body>
 </html>

@@ -9,30 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/30b7876cd0.js" crossorigin="anonymous"></script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Marked (Markdown 渲染) -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- 配置 Tailwind 以匹配您的自定义颜色 -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'roboto-slab': ['"Roboto Slab"', 'serif'],
-                    },
-                    colors: {
-                        'theme-bg': '#faf9f6',
-                        'theme-text': '#333333',
-                        'theme-accent': '#e6bfa7',
-                    }
-                }
-            }
-        }
-    </script>
 
     <style>
         html, body {
@@ -122,26 +98,6 @@
         .social-icons a:hover {
             color: #e6bfa7;
         }
-
-        /* Agent */
-        /* 去除滚动条但保留功能 */
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-
-        /* 打字动画小点 */
-        .typing-dot { animation: typing 1.4s infinite ease-in-out both; background-color: #333333; }
-        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
-        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
-        @keyframes typing {
-            0%, 80%, 100% { transform: scale(0); }
-            40% { transform: scale(1); }
-        }
-
-        /* Markdown 样式调整 - 适应衬线体 */
-        .prose p { margin-bottom: 0.8em; text-align: justify; hyphens: auto; }
-        .prose ul { list-style-type: square; padding-left: 1.2em; }
-        .prose strong { font-weight: 700; color: #000; }
-        .prose a { color: #e6bfa7; text-decoration: underline; }
 
         
         /* Cards */

@@ -8,7 +8,7 @@ image: "/images/databnf.png"
 
 This is the ongoing project related with my master thesis. I am still working on the data collecting and preliminary exploration, co-supervised by [Jacob Habinek](https://liu.se/en/employee/jacha66) and [Johan Lindell](https://www.uu.se/en/contact-and-organisation/staff?query=N19-2617).
 
-That said, I have collected the biographical \& publication practices data for 300 French philosophers, and conducted a preliminary Bourdieusian MCA analysis to map the space of positions and habitus. The results could be seen in this [working draft](./files/french_philosophy_MCA_working_draft.pdf).
+That said, I have collected the biographical \& publication practices data for 300 French philosophers, and conducted a preliminary Bourdieusian MCA analysis to map the space of positions and habitus. The results could be seen in this [working draft](https://mooneater0912.github.io/files/french_philosophy_MCA_working_draft.pdf).
 
 Text data was requested from [JSTOR](https://www.jstor.org). I defined "core philosophy academic journals" and selected 8 journals: 
 - Archives de Philosophie
@@ -16,6 +16,9 @@ Text data was requested from [JSTOR](https://www.jstor.org). I defined "core phi
 - Revue de Théologie et de Philosophie
 - Revue des Sciences Philosophiques et Théologiques
 - Revue Internationale de Philosophie
+- Les études philosophiques
+- Revue philosophique de Louvain
+- Revue philosophique de la France et de l'étranger
 
 I kept the authors having at least 3 publication recordings during 1950 - 1989 as samples (which, although includes most of the well-known philosophers, like Derrida, Deleuze, Canghuileim, etc., excludes more non-traditional philosophers like Foucault - but this is acceptable, as the field of interest is more of an academic one, instead of broader intellectual life). After cleaning and normalizing authors' names (really a HUGE task), I collected author metadata (gender, nationality, birth/death year/place, employer/institution) from [WikiData](https://www.wikidata.org/wiki/Wikidata:Main_Page) and [BNF](https://data.bnf.fr) (which is usually linked with IdRef and ISNI), using Python. There are about one fourth of my samples of whom the metadata is unaccessible from WikiData or BNF. For these cases, I tried to have their gender, birth date/place and institution from other sources, like obituaries, footnotes in their publications, interview recording, online philosophy encyclopedias, etc. 
 

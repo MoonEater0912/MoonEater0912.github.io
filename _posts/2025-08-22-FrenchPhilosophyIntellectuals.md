@@ -8,7 +8,7 @@ image: "/images/databnf.png"
 
 This is the ongoing project related with my master thesis. I am still working on the data collecting and preliminary exploration, co-supervised by [Jacob Habinek](https://liu.se/en/employee/jacha66) and [Johan Lindell](https://www.uu.se/en/contact-and-organisation/staff?query=N19-2617).
 
-That said, I have collected the biographical \& publication practices data for 300 French philosophers, and conducted a preliminary Bourdieusian MCA analysis to map the space of positions and habitus. The results could be seen in this [working draft](https://mooneater0912.github.io/files/french_philosophy_MCA_working_draft.pdf).
+For now, I have collected the biographical \& publication practices data for 300 French philosophers, and conducted a preliminary Bourdieusian MCA analysis to map the space of positions and philosophical practices (position-takings / habitus). The results could be seen in this [working draft](https://mooneater0912.github.io/files/french_philosophy_MCA_working_draft.pdf).
 
 Text data was requested from [JSTOR](https://www.jstor.org). I defined "core philosophy academic journals" and selected 8 journals: 
 - Archives de Philosophie

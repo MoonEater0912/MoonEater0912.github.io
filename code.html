@@ -1,15 +1,13 @@
 ---
 layout: default
-title: Translatin
+title: Code
 ---
 
-<h1 style="margin-top:0;">Translaton</h1>
-
-This page is for my translation works from English / French to Chinese.
+<h1 style="margin-top:0;">Project</h1>
 
 <div class="card-container">
-  {% assign translation_posts = site.posts | where: "category", "translation" %}
-  {% for post in translation_posts %}
+  {% assign code_posts = site.posts | where: "category", "code" %}
+  {% for post in code_posts %}
   <div class="card">
     <div class="card-content">
       <h3>

@@ -1,8 +1,8 @@
 ---
-title: "Solutions for Barabasi Network Science"
+title: "Solutions for Network Science by Albert-László Barabási"
 date: 2024-12-22
 layout: post
-category: project
+category: code
 tags: [Statistics, Python, Practice]
 ---
 

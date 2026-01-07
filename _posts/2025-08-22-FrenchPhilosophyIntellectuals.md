@@ -4,7 +4,7 @@ date: 2025-08-22
 layout: post
 category: research
 image: "/images/databnf.png"
----`
+---
 
 This is the ongoing project related with my master thesis. I am still working on the data collecting and preliminary exploration, co-supervised by [Jacob Habinek](https://liu.se/en/employee/jacha66) and [Johan Lindell](https://www.uu.se/en/contact-and-organisation/staff?query=N19-2617).
 

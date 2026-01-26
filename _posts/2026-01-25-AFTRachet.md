@@ -14,7 +14,7 @@ We ask why some disciplines (e.g., Computer Science) exhibit a clear "temporal d
 We developed a pipeline to measure intellectual inheritance across academic lineages and to operationalize the cultural ratchet and the transmission fidelity:
 
 * **Publication Embedding:** Shifted from sparse TF-IDF (used in the original dataset) to **Specter2 Transformer embeddings**, which captures citation-aware semantic nuances, ensuring robustness even for scientific papers with sparse text. We also applied a normalization strategy to the embeddings to remove field-specific common components, thereby amplifying the semantic contrast between individual publications.
-* **Weighted Author Vectors:** Instead of simple centroids, author vectors are pooled using a weight of $\frac{1}{n\_authors}$ per paper to prioritize individual research preferences over large-scale collaborations.
+* **Weighted Author Vectors:** Instead of simple centroids, author vectors are pooled using a weight of $\frac{1}{n\_{authors}}$ per paper to prioritize individual research preferences over large-scale collaborations.
 * **Decoupling Kinship from Cohort:** We introduced **Genealogical Distance** (sum of path length to a pair's Least Common Ancestor). This removed the collinearity between lineage proximity and publication year (Spearman's $\rho \approx 0$).
 * **The Fidelity Metric:** We modeled inheritance using $Ancestor \to Parent \to Child$ triples:
     1.  **Parental Innovation ($\vec{v}_1$):** The component of the Parent’s vector orthogonal to the Ancestor:

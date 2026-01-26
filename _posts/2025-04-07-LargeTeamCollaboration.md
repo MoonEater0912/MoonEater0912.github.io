@@ -11,4 +11,4 @@ This is the research I worked on as a research assistant at Aalto University, su
 
 The full paper can be seen [here](/files/chi26-930.pdf).
 
-We are developing another relevant network-based computational research, which can be seen [here]([2026-01-26-TeamSizeHomophily.md](https://mooneater0912.github.io/post/2026/01/26/TeamSizeHomophily)).
+We are developing another relevant network-based computational research, which can be seen [here](https://mooneater0912.github.io/post/2026/01/26/TeamSizeHomophily).
